@@ -1,0 +1,364 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  background-image: url(interpattet.png);
+  background-size: cover;
+  background-position: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.parent {
+  margin: 0px;
+  padding: 0px;
+}
+.header {
+  background-color: rgb(65, 65, 80);
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+#direct {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0px 20px;
+  margin: 0px;
+  gap: 20px;
+  width: 700px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.directText {
+  margin: 0;
+  padding: 0;
+}
+
+.directText:hover {
+  margin: 0;
+  padding: 0;
+}
+
+.invidDirect {
+  background-color: rgb(65, 65, 80);
+  border: 1px solid white;
+  color: white;
+  width: 70px;
+  padding: 10px 20px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
+
+.invidDirect:hover {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+  padding: 10px 20px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
+
+.content {
+  background-color: transparent;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  min-height: 75vh;
+}
+
+.infoDirect {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  justify-content: space-evenly;
+  padding-top: 5%;
+}
+
+.lagarDirect {
+  margin: 0;
+  background-color: white;
+  width: 40%;
+  height: 300px;
+  padding: 10px;
+  border-radius: 15px;
+  opacity: 80%;
+}
+
+.lagarInfo {
+  display: flex;
+  min-height: 75vh;
+}
+
+.lagarPoints {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: rgb(138, 138, 167);
+  gap: 1px;
+}
+
+.lagarPointsSelected {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.lagarPointsInvid {
+  display: flex;
+  background-color: rgb(188, 188, 229);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.lagarPointsInvid:target {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.lagarPointsInvid:hover {
+  display: flex;
+  background-color: rgb(205, 205, 229);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.lagarText {
+  display: none;
+}
+.lagarText:target {
+  display: block;
+  background-color: white;
+  width: 60%;
+  padding: 2% 10%;
+  box-sizing: border-box;
+}
+
+.lagarText p {
+  margin: 0;
+}
+
+.teknikDirect {
+  margin: 0;
+  background-color: white;
+  width: 40%;
+  height: 300px;
+  padding: 10px;
+  border-radius: 15px;
+  opacity: 80%;
+}
+
+.description {
+  margin: 0;
+  width: 400px;
+}
+
+.ContContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.myContacts {
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+}
+
+.myProfile2 img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid rgb(100, 0, 0);
+}
+
+.Name {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: rgb(100, 0, 0);
+}
+
+.myContacts p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.myContacts a {
+  text-decoration: none;
+}
+
+.myContacts a:hover {
+  text-decoration: underline;
+}
+
+.yourContacts {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px 40px;
+  flex: 1;
+  max-width: 450px;
+}
+
+.invidInput {
+  margin-bottom: 20px;
+}
+
+.invidInput label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.invidInput input,
+.invidInput textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.invidInput input:focus,
+.invidInput textarea:focus {
+  border-color: #0077ff;
+  outline: none;
+}
+
+.submitButton {
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #005fd1;
+}
+
+@media (max-width: 768px) {
+  .ContContent {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .myContacts,
+  .yourContacts {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+.footer {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  bottom: 0;
+}
+
+#logo {
+  height: 60%;
+  aspect-ratio: 1/1;
+  margin: 20px;
+}
+
+#date {
+  color: white;
+  margin: 20px;
+}
+
+#logo2 {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: black;
+}
+
+.imgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+}
+
+.imgDiv img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.imgDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .imgDiv {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .imgDiv img {
+    height: 200px;
+  }
+}
+
+.footerFix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
