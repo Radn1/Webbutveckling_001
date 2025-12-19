@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles2.css" />
   </head>
   <body>
+    <div class="background"></div>
     <div class="parent">
       <div class="header">
         <img src="PersonalLogo.png" id="logo" />
@@ -21,14 +22,236 @@
           </a>
         </div>
       </div>
-      <div class="teknikInfo">
-        <div class="teknikPoints"></div>
-        <div class="teknikText"></div>
+      <div class="Info">
+        <div class="Points">
+          <a href="index.html" class="back">
+            <p>Bakåt</p>
+          </a>
+          <a href="#teknik" class="PointsInvid">
+            <p>Introduktion</p>
+          </a>
+          <a href="#OSI" class="PointsInvid">
+            <p>OSI</p>
+          </a>
+          <a href="#SCM" class="PointsInvid">
+            <p>Server-Client Model</p>
+          </a>
+          <a href="#htppvhtpps" class="PointsInvid">
+            <p>htpp vs hppts</p>
+          </a>
+          <a href="#DNS" class="PointsInvid">
+            <p>DNS</p>
+          </a>
+        </div>
+        <div class="text">
+          <div class="textInvid" id="teknik">
+            <h2>Teknisk kommunikation och webbens grunder</h2>
+            <p>
+              För att förstå hur webben och digitala tjänster fungerar krävs
+              kunskap om hur information skickas, tas emot och skyddas över
+              nätverk. Tekniken bakom internet bygger på tydliga modeller,
+              protokoll och system som tillsammans möjliggör säker och
+              tillförlitlig kommunikation.
+            </p>
+            <p>
+              I detta avsnitt behandlas grundläggande tekniska begrepp som
+              OSI-modellen, Server-Client-modellen, HTTP och HTTPS samt DNS.
+              Informationen förklarar hur data färdas mellan klient och server,
+              hur webbsidor levereras och hur domännamn översätts till
+              IP-adresser.
+            </p>
+          </div>
+          <div class="textInvid" id="OSI">
+            <h2>OSI-modellen</h2>
+            <p>
+              OSI (Open Systems Interconnection) är en referensmodell som
+              beskriver hur data kommuniceras mellan olika system i ett nätverk.
+              Den delar upp nätverkskommunikation i sju lager, där varje lager
+              har specifika funktioner. Modellen speglar processen för
+              dataöverföring från en applikation på en dator till en annan över
+              nätverket.
+            </p>
+            <h3>De sju lagren</h3>
+            <ul>
+              <li>
+                <strong>Applikationslager (7):</strong> Ger tjänster direkt till
+                användarprogram, t.ex. webbläsare och e-post.
+              </li>
+              <li>
+                <strong>Presentationslager (6):</strong> Hanterar dataformat,
+                kodning, kryptering och komprimering.
+              </li>
+              <li>
+                <strong>Sessionslager (5):</strong> Upprättar, hanterar och
+                avslutar sessioner mellan applikationer.
+              </li>
+              <li>
+                <strong>Transportlager (4):</strong> Säkerställer korrekt
+                överföring mellan ändpunkter, t.ex. TCP eller UDP.
+              </li>
+              <li>
+                <strong>Nätverkslager (3):</strong> Ansvarar för adressering och
+                routing av paket, t.ex. IP.
+              </li>
+              <li>
+                <strong>Datalänklager (2):</strong> Hanterar fysisk adressering
+                (MAC) och felkontroll på nätverkssegment.
+              </li>
+              <li>
+                <strong>Fysiskt lager (1):</strong> Överför de faktiska bitarna
+                över kabel, trådlöst eller annan fysisk media.
+              </li>
+            </ul>
+            <h3>Exempel: Kommunikation mellan dator och webbplats</h3>
+            <p>När du öppnar en webbsida:</p>
+            <ul>
+              <li>
+                <strong>Applikationslager:</strong> Webbläsaren skapar en
+                HTTP-förfrågan.
+              </li>
+              <li>
+                <strong>Presentationslager:</strong> Data kan krypteras med
+                SSL/TLS eller formateras.
+              </li>
+              <li>
+                <strong>Sessionslager:</strong> En session upprättas, t.ex.
+                cookies hanteras.
+              </li>
+              <li>
+                <strong>Transportlager:</strong> TCP segmenterar data och
+                säkerställer korrekt överföring.
+              </li>
+              <li>
+                <strong>Nätverkslager:</strong> IP-adresser används för routing.
+              </li>
+              <li>
+                <strong>Datalänklager:</strong> MAC-adresser identifierar
+                enheter på samma lokala nätverk.
+              </li>
+              <li>
+                <strong>Fysiskt lager:</strong> Elektriska signaler eller
+                radiovågor transporterar bitarna.
+              </li>
+            </ul>
+          </div>
+
+          <div class="textInvid" id="SCM">
+            <h2>Server-Client-modellen</h2>
+            <p>
+              En server är en dator eller programvara som tillhandahåller
+              resurser, data eller tjänster till andra datorer (klienter) över
+              ett nätverk. Den väntar på förfrågningar och svarar på dessa.
+            </p>
+            <h3>Exempel på serverapplikationer</h3>
+            <ul>
+              <li>
+                <strong>Webbserver:</strong> Tar emot HTTP-förfrågningar från
+                webbläsare och skickar tillbaka HTML, CSS, JavaScript.
+              </li>
+              <li>
+                <strong>API-server:</strong> Tar emot GET/POST-förfrågningar och
+                skickar JSON-data som svar.
+              </li>
+            </ul>
+            <h3>Klientens roll</h3>
+            <p>
+              En klient skickar förfrågningar till servern för att ta emot data
+              eller tjänster. Skillnaden mot servern är att klienten initierar
+              kommunikationen medan servern väntar på förfrågningar.
+            </p>
+          </div>
+
+          <div class="textInvid" id="htppvhtpps">
+            <h2>HTTP och HTTPS</h2>
+            <h3>HTTP-metoder</h3>
+            <ul>
+              <li>
+                <strong>GET:</strong> Hämtar data från servern, påverkar inte
+                serverns tillstånd.
+              </li>
+              <li>
+                <strong>POST:</strong> Skickar data till servern, t.ex.
+                formulärdata; kan ändra serverns tillstånd.
+              </li>
+              <li>
+                <strong>PUT:</strong> Uppdaterar eller skapar en resurs på
+                servern.
+              </li>
+            </ul>
+            <h3>HTTP-statuskoder</h3>
+            <ul>
+              <li><strong>200 OK:</strong> Begäran lyckades.</li>
+              <li>
+                <strong>301 Moved Permanently:</strong> Resurs har flyttats
+                permanent.
+              </li>
+              <li>
+                <strong>302 Found:</strong> Resurs har flyttats temporärt.
+              </li>
+              <li><strong>404 Not Found:</strong> Resursen finns inte.</li>
+              <li>
+                <strong>500 Internal Server Error:</strong> Servern har problem.
+              </li>
+            </ul>
+            <h3>SSL/TLS och säkerhet</h3>
+            <p>
+              SSL/TLS krypterar data mellan klient och server för att skydda mot
+              avlyssning och manipulation. HTTPS är HTTP över TLS.
+            </p>
+            <p>
+              Ett SSL-certifikat autentiserar webbplatsen och gör
+              kommunikationen krypterad. Det är viktigt för säker överföring av
+              känslig data.
+            </p>
+            <p>
+              DDoS (Distributed Denial of Service) är en attack där många
+              enheter överbelastar en server med trafik, vilket gör webbplatsen
+              långsam eller otillgänglig.
+            </p>
+          </div>
+          <div class="imgTextDiv">
+            <img src="1_e0MnRFMN-4U-lWeSCpGaMA.jpg" />
+          </div>
+
+          <div class="textInvid" id="DNS">
+            <h2>DNS</h2>
+            <h3>Root Level</h3>
+            <p>
+              Det högsta nivålager i DNS-hierarkin. Root-servrar dirigerar
+              förfrågningar vidare till rätt Top Level Domain (TLD).
+            </p>
+            <h3>Top Level Domains (TLDs)</h3>
+            <p>
+              De yttersta domännamnen efter punkten, t.ex.
+              <strong>.com, .org, .se, .edu</strong>.
+            </p>
+            <h3>Second Level Domains</h3>
+            <p>
+              Domännamnet direkt före TLD, t.ex. <strong>google</strong> i
+              google.com. Identifierar en unik webbplats.
+            </p>
+            <h3>Sub-Domain</h3>
+            <p>
+              Domän under SLD, t.ex. <strong>mail.google.com</strong> eller
+              <strong>shop.example.com</strong>. Används för att organisera
+              olika tjänster.
+            </p>
+            <h3>Host i URL</h3>
+            <p>
+              Hosten representerar den dator eller tjänst som tillhandahåller
+              resurser, t.ex. <strong>www</strong> i www.example.com. Hosten
+              översätts via DNS till en IP-adress.
+            </p>
+          </div>
+          <div class="imgTextDiv">
+            <img src="DNS-lookup-process-.png" />
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="footerFix">
-      <p id="date">© 2025</p>
-      <img src="PersonalLogo.png" id="logo2" />
+      <div class="footer">
+        <p id="date">© 2025</p>
+        <img src="PersonalLogo.png" id="logo2" />
+      </div>
     </div>
   </body>
 </html>

@@ -14,7 +14,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   z-index: -1;
 }
 .parent {
@@ -22,7 +21,11 @@ body {
   padding: 0px;
   position: relative;
   z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
 .header {
   background-color: rgb(65, 65, 80);
   height: 15vh;
@@ -108,51 +111,79 @@ a {
   opacity: 80%;
 }
 
-.lagarInfo {
+.Info {
   display: flex;
   min-height: 75vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex: 1;
 }
 
-.lagarPoints {
+.Points {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 20vw;
   background-color: rgb(138, 138, 167);
   gap: 1px;
 }
 
-.lagarPointsSelected {
-  display: flex;
-  background-color: white;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-.lagarPointsInvid {
+.PointsInvid {
   display: flex;
   background-color: rgb(188, 188, 229);
   width: 100%;
   align-items: center;
   justify-content: center;
 }
-.lagarPointsInvid:hover {
+.PointsInvid:hover {
   display: flex;
   background-color: rgb(205, 205, 229);
   width: 100%;
   align-items: center;
   justify-content: center;
 }
-
-.lagarText {
-  display: block;
-  background-color: white;
-  width: 60%;
-  padding: 2% 10%;
-  box-sizing: border-box;
+.back {
+  display: flex;
+  background-color: rgb(125, 125, 150);
+  color: white;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.back:hover {
+  display: flex;
+  background-color: rgb(163, 0, 0);
+  color: white;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-.lagarText p {
+.text {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
   margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.textInvid {
+  display: block;
+  flex-direction: column;
+  padding: 2% 10%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.imgTextDiv {
+  margin: 2% 10%;
+}
+.imgTextDiv img {
+  width: 100%;
 }
 
 .teknikDirect {
@@ -165,6 +196,23 @@ a {
   opacity: 80%;
 }
 
+.infoContent {
+  display: flex;
+  padding: 50px;
+  margin: 0;
+  gap: 15px;
+}
+
+.myImageDiv {
+  margin: 0;
+  padding: 0;
+}
+
+#myImage {
+  border: 20px solid gray;
+  height: 300px;
+  width: auto;
+}
 .description {
   margin: 0;
   width: 400px;
@@ -312,42 +360,6 @@ a {
 
 a {
   color: black;
-}
-
-.imgDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding: 40px;
-}
-
-.imgDiv img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border: 2px solid #333;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-.imgDiv {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  justify-content: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-@media (max-width: 700px) {
-  .imgDiv {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .imgDiv img {
-    height: 200px;
-  }
 }
 
 .footerFix {
