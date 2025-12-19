@@ -2,14 +2,26 @@ body {
   margin: 0px;
   padding: 0px;
   min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url(interpattet.png);
   background-size: cover;
   background-position: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-repeat: no-repeat;
+
+  z-index: -1;
 }
 .parent {
   margin: 0px;
   padding: 0px;
+  position: relative;
+  z-index: 1;
 }
 .header {
   background-color: rgb(65, 65, 80);
@@ -123,15 +135,6 @@ a {
   align-items: center;
   justify-content: center;
 }
-
-.lagarPointsInvid:target {
-  display: flex;
-  background-color: white;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
 .lagarPointsInvid:hover {
   display: flex;
   background-color: rgb(205, 205, 229);
@@ -139,10 +142,8 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 .lagarText {
-  display: none;
-}
-.lagarText:target {
   display: block;
   background-color: white;
   width: 60%;
